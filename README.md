@@ -1,24 +1,12 @@
-# README
+# create a user 
+curl -X POST http://localhost:3000/api/v1/users -H "Content-Type: application/json" -d '{"user": {"name": "Jack", "email": "jack@example.com"}}'
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# get users
+curl http://localhost:3000/api/v1/users
 
-Things you may want to cover:
+# create attendance
+curl -X POST http://localhost:3000/api/v1/users/1/attendances -H "Content-Type: application/json" -d '{"attendance": {"date": "2024-05-17", "status": "present", "checkin": "2024-05-17T09:00:00Z", "checkout": "2024-05-17T17:00:00Z"}}'
 
-* Ruby version
+# get attendance for a user 
+curl http://localhost:3000/api/v1/users/1/attendances
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
